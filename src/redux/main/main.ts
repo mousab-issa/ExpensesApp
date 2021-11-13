@@ -24,8 +24,6 @@ export const mainSlice = createSlice({
     },
   },
   extraReducers: {
-    // Add transaction
-
     [setLanguage.fulfilled.type]: (state, action) => {
       state.lang = action.payload;
     },

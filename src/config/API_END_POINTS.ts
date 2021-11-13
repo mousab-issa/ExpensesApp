@@ -1,5 +1,14 @@
 export const END_POINTS = {
-  Mock: {
-    posts: 'http://localhost:3000/posts',
+  Auth: {
+    baseUrl: 'http://localhost:4000',
+    login: function (): string {
+      return this.baseUrl + '/sign-in';
+    },
+    signUp: function (): string {
+      return this.baseUrl + '/sign-up';
+    },
+    checkToken: function (): string {
+      return this.baseUrl + '/validate-token';
+    },
   },
 };

@@ -18,7 +18,7 @@ const FormButton: FC<Props> = ({ onPress, title, loading, iconName, backgroundCo
         <TouchableOpacity
             disabled={loading || disbaled}
             onPress={onPress}
-            style={[styles.button, { backgroundColor: disbaled ? 'grey' : theme.Colors.primary }]}
+            style={[styles.button, { backgroundColor: disbaled ? 'grey' : backgroundColor }]}
         >
             {
                 loading ? <ActivityIndicator color="white" /> :

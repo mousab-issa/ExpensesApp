@@ -5,7 +5,7 @@ import {themeType} from './types';
 export const theme: themeType = {
   Colors: {
     primary: '#8E20E1',
-    primaryDark: '#007367',
+    primaryDark: 'purple',
     primaryLight: '#DBF1CD',
     secondary: '#40968D',
     inactive: '#818C981A',

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const HEADERS = {
   Accept: 'application/json',
-  'Content-Type': '',
+  'Content-Type': 'application/json',
 };
 
 const apiMiddleware = {
@@ -10,17 +10,14 @@ const apiMiddleware = {
   postAuthApi: async (
     endPoint: string,
     data?: {
-      username: string;
+      email: string;
       password: string;
-      grant_type: string;
-      client_id: string;
     },
     headers?: any,
   ) => {
     try {
       return axios.post(endPoint, data, {
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
           ...headers,
         },
       });

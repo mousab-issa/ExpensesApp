@@ -41,7 +41,7 @@ const CustomLottieIcon: FC<Props> = ({ start, name, size }) => {
                         height: Constants.ResponsiveSize.f120,
                         width: Constants.ResponsiveSize.f120
                     }}
-                    source={require(`../../../../assets /lottie_animation/Loading_Animation.json`)}
+                    source={require(`../../../../assets /lottie_animation/loading.json`)}
                     ref={gameRef}
                 />
             );

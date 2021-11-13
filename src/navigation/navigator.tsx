@@ -8,6 +8,7 @@ const Navigator = () => {
     return (
         <NavigationContainer>
             <HomeStack />
+            <Toast />
         </NavigationContainer>
     );
 }

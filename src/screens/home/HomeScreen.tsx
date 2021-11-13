@@ -18,12 +18,13 @@ const Home: FC<Props> = ({
     navigation
 }) => {
     const transactions = useAppSelector(state => state.mainSlice.transactions)
+    const username = useAppSelector(state => state.authSlice.user.name)
     const balance = useAppSelector(state => state.mainSlice.balance)
     const expenses = useAppSelector(state => state.mainSlice.expenses)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        console.log(transactions);
+        console.log(username);
     }, [dispatch])
 
 
@@ -43,7 +44,7 @@ const Home: FC<Props> = ({
 
             <SafeAreaView >
                 <View style={{ height: 50 }}>
-                    <Text style={[{ ...theme.Fonts?.Main.header, color: "white" }]}>{langauges.welcome}</Text>
+                    <Text style={[{ ...theme.Fonts?.Main.header, color: "white" }]}>{langauges.welcome} {username}</Text>
                 </View>
                 <HomeCard
                     title='Your balance'
