@@ -11,11 +11,14 @@ import LocalizedStrings, {
 export interface IStrings extends LocalizedStringsMethods {
   hey: string;
   Login: string;
-  Signup: string,
-  OrSignup: string,
+  Signup: string;
+  OrSignup: string;
   username: string;
+  name: string;
+  phone: string;
   pleaseEnterUserName: string;
   password: string;
+  email: string;
   passInstruction: string;
   home: string;
   goals: string;
@@ -28,7 +31,6 @@ export interface IStrings extends LocalizedStringsMethods {
   history: string;
   date: string;
   transactions: string;
-  
 }
 let strings: IStrings;
 
@@ -38,9 +40,12 @@ export default strings = new LocalizedStrings({
     login: 'Login Now',
     hey: 'Hey,',
     Login: 'Login',
-    Signup: 'Signup',
+    Signup: 'Sign up',
     OrSignup: 'Or Sign up',
+    name: 'name',
+    phone: 'phone',
     username: 'Username',
+    email: 'email',
     pleaseEnterUserName: 'Please Enter The User Name',
     password: 'Password',
     passInstruction: 'number or letters',
@@ -55,15 +60,17 @@ export default strings = new LocalizedStrings({
     history: 'History',
     date: 'Date',
     transactions: 'Transacations',
-    error:"Some Error Occured ",
-    
+    error: 'Some Error Occured ',
   },
   ar: {
     choose: 'Choose Your Location',
     login: 'Login Now',
     hey: 'Hey,',
     Login: 'Login',
-    Signup: 'Signup',
+    name: 'name',
+    phone: 'phone',
+    email: 'email',
+    Signup: 'Sign up',
     OrSignup: 'Or Sign up',
     username: 'Username',
     pleaseEnterUserName: 'Please Enter The User Name',
@@ -80,6 +87,6 @@ export default strings = new LocalizedStrings({
     history: 'History',
     date: 'Date',
     transactions: 'Transacations',
-    error:"Some Error Occured "
+    error: 'Some Error Occured ',
   },
 });

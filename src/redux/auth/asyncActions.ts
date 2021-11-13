@@ -8,14 +8,38 @@ import {removeAsyncItem, SetAsyncItem} from '../../helpers/common';
 
 export const SignUpUser = createAsyncThunk(
   `${reducerName}/SignUpUser`,
-  async (userId, thunkAPI) => {
-    const response = await apiMiddleware.getDataApi(END_POINTS.Mock.posts);
-    if (response && response.status === 200) {
-      return response.data;
+  async (
+    {
+      email,
+      password,
+      name,
+      phone,
+    }: {email: string; password: string; phone: string; name: string},
+    thunkAPI,
+  ) => {
+    try {
+      const response = await apiMiddleware.postAuthApi(
+        END_POINTS.Auth.signUp(),
+        {
+          email,
+          password,
+          name,
+          phone,
+        },
+      );
+
+      if (response && response.status === 200) {
+        thunkAPI.dispatch(LoginUser({email, password}));
+        return response.data.data;
+      }
+    } catch (error: any) {
+      console.log(error);
+
+      return thunkAPI.rejectWithValue(error.message);
     }
-    return;
   },
 );
+
 
 export const LoginUser = createAsyncThunk(
   `${reducerName}/LoginUser`,

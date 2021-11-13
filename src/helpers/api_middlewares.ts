@@ -12,6 +12,8 @@ const apiMiddleware = {
     data?: {
       email: string;
       password: string;
+      name?: string;
+      phone?: string;
     },
     headers?: any,
   ) => {

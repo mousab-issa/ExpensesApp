@@ -17,13 +17,14 @@ export const authSlice = createSlice({
     clearState: state => {
       state.isLoading = false;
       state.isInitiLoading = false;
+      state.isSignedIn = false;
+      state.isSignedOut = true;
+      state.userToken = undefined;
     },
   },
   extraReducers: {
     // Login
     [LoginUser.fulfilled.type]: (state, action: PayloadAction<Session>) => {
-      console.log(action.payload.email);
-
       state.isSignedIn = true;
       state.isSignedOut = false;
       state.userToken = action.payload.token;
@@ -52,8 +53,6 @@ export const authSlice = createSlice({
     [SignUpUser.rejected.type]: (state, action: PayloadAction<string>) => {},
     // Check if token is valid
     [CheckTokenValid.fulfilled.type]: (state, action: PayloadAction<User>) => {
-      console.log(action.payload);
-
       state.userToken = action.payload.token;
       state.user = action.payload;
       state.isLoading = false;

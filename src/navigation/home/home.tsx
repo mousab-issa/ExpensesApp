@@ -7,6 +7,7 @@ import NetInfo from "@react-native-community/netinfo";
 import HomeTabs from './homeTabs';
 import AddExpenses from '../../screens/add-expenses/AddExpensesScreen';
 import Login from '../../screens/login/login';
+import SignUp from '../../screens/sign-up/singUp';
 import Splash from '../../screens/splash/splash';
 // Redux 
 import { useAppDispatch, useAppSelector } from "../../redux/hooks";
@@ -75,7 +76,7 @@ const HomeStack = () => {
         (
           <>
             <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-            <Stack.Screen name="SignUp" component={Login} options={{ headerShown: false }} />
+            <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }} />
           </>
         )
         :

@@ -1,17 +1,20 @@
 import React, { FC, useEffect } from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Icon from 'react-native-vector-icons/FontAwesome'
 // 
 import { useAppSelector, useAppDispatch } from '../../redux/hooks';
 //
 import { Props } from './types';
 import styles from './styles';
 // 
-import { HEIGHT, WIDTH } from '../../common/constants';
+import Constants, { HEIGHT, WIDTH } from '../../common/constants';
 import langauges from '../../common/langauges';
 import HomeCard from '../../components/homeCard/HomeCard';
 import TransactionCard from '../../components/transactionCard/TranscationCard';
 import { theme } from '../../common/theme/theme';
+import { removeAsyncItem } from '../../helpers/common';
+import { clearState } from '../../redux/auth/auth';
 
 
 const Home: FC<Props> = ({
@@ -23,10 +26,13 @@ const Home: FC<Props> = ({
     const expenses = useAppSelector(state => state.mainSlice.expenses)
     const dispatch = useAppDispatch()
 
-    useEffect(() => {
-        console.log(username);
-    }, [dispatch])
 
+    const Logout = async () => {
+        try {
+            await removeAsyncItem('USER_TOKEN');
+            return dispatch(clearState());
+        } catch (e) { }
+    }
 
     return (
         <View style={styles.container}>
@@ -43,8 +49,11 @@ const Home: FC<Props> = ({
             </View>
 
             <SafeAreaView >
-                <View style={{ height: 50 }}>
+                <View style={{ height: 50, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' }}>
                     <Text style={[{ ...theme.Fonts?.Main.header, color: "white" }]}>{langauges.welcome} {username}</Text>
+                    <TouchableOpacity onPress={Logout}>
+                        <Icon name="power-off" size={Constants.ResponsiveSize.f20} color="white" />
+                    </TouchableOpacity>
                 </View>
                 <HomeCard
                     title='Your balance'
