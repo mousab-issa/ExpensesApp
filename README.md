@@ -18,7 +18,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 4. install pods 
    ```sh
-    cd ios && pod install && cd ..;
+    cd ios && pod install && cd ..
    ```
  5. run the ios application  
    ```sh
