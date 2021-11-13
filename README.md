@@ -32,5 +32,6 @@ _Below is an example of how you can instruct your audience on installing and set
    
  7. you can also download the apk in the apk-build folder
   
+  UI was inspired by https://dribbble.com/shots/14354274-Money-Manager-App
   Enjoy
   
