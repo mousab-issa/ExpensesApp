@@ -18,16 +18,16 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 4. install pods 
    ```sh
-    cd ios && pod install && cd ..';
+    cd ios && pod install && cd ..;
    ```
  5. run the ios application  
    ```sh
-   yarn ios';
+   yarn ios;
    ```
   
  6. run the android application  
    ```sh 
-   yarn android ';
+   yarn android;
    ```
    
  7. you can also download the apk in the apk-build folder
