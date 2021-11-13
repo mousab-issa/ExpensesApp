@@ -22,14 +22,15 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
  5. run the ios application  
    ```sh
-    yarn ios';
-    ```
+   yarn ios';
+   ```
+  
  6. run the android application  
-   ``` sh 
+   ```sh 
    yarn android ';
    ```
    
- 5. you can also download the apk in the apk-build folder
+ 7. you can also download the apk in the apk-build folder
   
   Enjoy
   
