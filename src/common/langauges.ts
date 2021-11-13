@@ -49,6 +49,7 @@ export default strings = new LocalizedStrings({
     pleaseEnterUserName: 'Please Enter The User Name',
     password: 'Password',
     passInstruction: 'number or letters',
+    emailInstruction: 'Email e.g. m@gmail.com',
     home: 'Home',
     goals: 'Goals',
     Stats: 'Stats',

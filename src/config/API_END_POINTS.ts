@@ -1,6 +1,6 @@
 export const END_POINTS = {
   Auth: {
-    baseUrl: 'http://localhost:4000',
+    baseUrl: 'https://serverexpensesinterview.herokuapp.com',
     login: function (): string {
       return this.baseUrl + '/sign-in';
     },

@@ -51,7 +51,7 @@ const SignUpScreen: FC<Props> = ({ navigation }) => {
 
                     <View style={{ flexDirection: 'column', justifyContent: 'center', marginBottom: 20 }}>
                         <View style={{ marginVertical: Constants.ResponsiveSize.f10 }}>
-                            <FormTextInput label={langauges.email} placeHolder={langauges.passInstruction} onTextChange={(text) => setEmail(text)} />
+                            <FormTextInput label={langauges.email} placeHolder={langauges.emailInstruction} onTextChange={(text) => setEmail(text)} />
                         </View>
                         <View style={{ marginVertical: Constants.ResponsiveSize.f10 }}>
                             <FormTextInput label={langauges.password} placeHolder={langauges.passInstruction} password onTextChange={(text) => setPassword(text)} />
