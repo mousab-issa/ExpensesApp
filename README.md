@@ -12,25 +12,29 @@ _Below is an example of how you can instruct your audience on installing and set
    ```sh
    yarn
    ```
-3. You can also use npm to install node moudles 
+3. Install node modules for the server and run the server 
+   ```sh
+    cd server &&yarn &&yarn run dev
+   ```
+4. You can also use npm to install node moudles 
    ```sh
    npm install
    ```
-4. install pods 
+5. open another terminal and cd the app dir and install pods 
    ```sh
     cd ios && pod install && cd ..
    ```
- 5. run the ios application  
+6. run the ios application  
    ```sh
    yarn ios;
    ```
   
- 6. run the android application  
+7. run the android application  
    ```sh 
    yarn android;
    ```
    
- 7. you can also download the apk in the apk-build folder
+8. you can also download the apk in the apk-build folder
   
   UI was inspired by https://dribbble.com/shots/14354274-Money-Manager-App
   Enjoy
