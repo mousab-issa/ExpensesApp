@@ -1,7 +1,14 @@
 <h1>Expenses App<h1 />
   
-  ### Installation
 
+![WhatsApp Image 2021-11-14 at 12 40 53 PM (2)](https://user-images.githubusercontent.com/59908473/141667882-c6e90697-34fe-4be0-a4e4-fec07ad23bd5.jpeg)
+![WhatsApp Image 2021-11-14 at 12 40 53 PM (3)](https://user-images.githubusercontent.com/59908473/141667885-2b1792a8-5cf8-45b2-a923-51235d5ba3dd.jpeg)
+![WhatsApp Image 2021-11-14 at 12 40 53 PM](https://user-images.githubusercontent.com/59908473/141667886-1365b02a-ba6f-4c5f-a40d-bd0784021ed3.jpeg)
+![WhatsApp Image 2021-11-14 at 12 40 53 PM (1)](https://user-images.githubusercontent.com/59908473/141667887-4fe1937b-f767-4435-bb80-96942ed66ce3.jpeg)
+
+  
+ ### Installation
+  
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
